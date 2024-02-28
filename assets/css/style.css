@@ -16,6 +16,7 @@
 
 	--fonte-primaria: 400 4.5rem Alice, sans-serif;
 	--fonte-secundaria-lg: 400 1.5rem Nunito, sans-serif;
+	--fonte-secundaria-lg-b: 700 1.5rem Nunito, sans-serif;
 	--fonte-secundaria-md: 400 1.125rem Nunito, sans-serif;
 	--fonte-secundaria-md-b: 700 1.125rem Nunito, sans-serif;
 	--fonte-secundaria-sm: 400 0.875rem Nunito, sans-serif;
@@ -35,9 +36,14 @@
 	margin: 0 auto;
 }
 
-@media (width <= 670px) {
+img {
+	display: block;
+	max-width: 100%;
+}
+
+@media (width <= 1100px) {
 	html {
-		font-size: 0.8rem;
+		font-size: 0.9rem;
 	}
 }
 
@@ -114,7 +120,7 @@ header {
 }
 
 /* INTRO */
-.intro {
+section.intro {
 	background-image: url('../imgs/bg-intro@2x.jpg');
 	background-size: cover;
 	background-position: center;
@@ -188,7 +194,7 @@ header {
 	}
 }
 
-@media (width <= 510px) {
+@media (width <= 610px) {
 	.intro > div {
 		flex-direction: column;
 		align-items: start;
@@ -197,5 +203,248 @@ header {
 
 	.intro form {
 		width: 100%;
+	}
+}
+
+/* CONTEUDO PRINCIPAL */
+
+section.praias {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 70px;
+	padding: 60px 4% 100px 4%;
+}
+
+.praias img {
+	max-width: 100%;
+}
+
+.praias-texto h2 {
+	font: var(--fonte-primaria);
+	padding-bottom: 35px;
+}
+
+.praias-texto span {
+	color: var(--cor-primaria-200);
+}
+
+.praias-texto ul {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	padding-top: 35px;
+	border-top: 3px solid var(--cor-neutra-100);
+}
+
+.praias-texto ul li {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	align-items: center;
+	padding-bottom: 30px;
+	border-bottom: 3px solid var(--cor-neutra-100);
+}
+
+.praias-texto ul li span {
+	font: var(--fonte-secundaria-lg);
+	color: var(--cor-neutra-500);
+}
+
+.praias-texto p {
+	font: var(--fonte-secundaria-md);
+	color: var(--cor-neutra-500);
+}
+
+.praias-texto p {
+	padding-top: 35px;
+}
+
+.como-chegar {
+	margin-left: 40px;
+}
+
+.como-chegar h3 {
+	font: var(--fonte-secundaria-md-b);
+	color: var(--cor-neutra-600);
+	padding-bottom: 15px;
+	position: relative;
+}
+
+.como-chegar h3::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: -15px;
+	top: 5px;
+	width: 8px;
+	height: 8px;
+	background: url(../imgs/detalhe-como-chegar.svg);
+}
+
+.como-chegar li {
+	gap: 5px;
+	font: var(--fonte-secundaria-md-b);
+	color: var(--cor-neutra-600);
+	position: relative;
+}
+
+.como-chegar li::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 8px;
+	left: -16px;
+	width: 10px;
+	height: 2px;
+	background: var(--cor-primaria-200);
+}
+
+.como-chegar li span {
+	color: var(--cor-neutra-300);
+}
+
+@media (width <= 1080px) {
+	section.praias {
+		grid-template-columns: 1fr;
+		row-gap: 40px;
+	}
+
+	.praias-local {
+		order: 2;
+	}
+
+	.praias-local img {
+		width: 100%;
+		max-height: 800px;
+		object-fit: contain;
+	}
+
+	.praias-texto {
+		order: 1;
+	}
+}
+
+/* AULAS */
+
+section.aulas {
+	position: relative;
+	background: var(--cor-neutra-100);
+}
+
+.aulas > div.container {
+	padding: 60px 4%;
+}
+
+.aulas h2 {
+	text-align: center;
+	font: var(--fonte-primaria);
+	color: var(--cor-neutra-500);
+	padding-top: 30px;
+	padding-bottom: 25px;
+}
+
+.aulas h2::before {
+	content: '';
+	display: block;
+	width: 174px;
+	height: 70px;
+	top: 0; /* Posiciona o elemento SVG na metade da altura da tela */
+	left: 50%; /* Posiciona o elemento SVG na metade da largura da tela */
+	transform: translate(
+		-50%,
+		-50%
+	); /* Move o elemento SVG de volta para centralizá-lo */
+	position: absolute;
+	background: url(../imgs/ondas.svg) no-repeat;
+}
+
+.box-aulas {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 30px;
+}
+
+.card-aula {
+	display: flex;
+	flex: 1 1 370px;
+	flex-direction: column;
+	padding: 60px;
+	border-radius: 5px;
+	background: #fff;
+	box-shadow: 0px 10px 10px 0px rgba(187, 204, 221, 0.4),
+		0px 5px 5px 0px rgba(187, 204, 221, 0.4);
+}
+
+.card-aula h3 {
+	text-align: center;
+	font: var(--fonte-secundaria-lg-b);
+	color: var(--cor-neutra-500);
+	padding-bottom: 30px;
+}
+
+.card-aula ul {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	font: var(--fonte-secundaria-sm);
+	color: var(--cor-neutra-500);
+	padding: 15px;
+	border-top: 3px solid var(--cor-neutra-100);
+}
+
+.card-aula ul li:first-child {
+	margin-top: 30px;
+}
+
+.card-aula ul li {
+	position: relative;
+}
+
+.card-aula ul li::after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	left: -15px;
+	top: 5px;
+	width: 8px;
+	height: 8px;
+	background: url(../imgs/detalhe-como-chegar.svg);
+}
+
+.card-aula span {
+	font: var(--fonte-secundaria-sm-b);
+	color: var(--cor-primaria-200);
+	padding-top: 20px;
+	padding-bottom: 30px;
+	border-top: 3px solid var(--cor-neutra-100);
+}
+
+.card-aula a {
+	display: flex;
+	justify-content: space-between;
+	border-radius: 5px;
+	font: var(--fonte-secundaria-md-b);
+	color: #fff;
+	background: var(--cor-neutra-500);
+	width: 100%;
+	padding: 10px 15px;
+}
+
+@media (width <= 1275px) {
+	.box-aulas {
+		justify-content: center;
+	}
+
+	.card-aula {
+		flex: 1 1 370;
+	}
+
+	.card-aula ul {
+		font-size: 1.2rem;
+	}
+
+	.card-aula span {
+		font-size: 1.2rem;
 	}
 }
