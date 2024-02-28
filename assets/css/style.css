@@ -31,7 +31,7 @@
 }
 
 .container {
-	max-width: 1170px;
+	max-width: 1400px;
 	margin: 0 auto;
 }
 
@@ -114,3 +114,88 @@ header {
 }
 
 /* INTRO */
+.intro {
+	background-image: url('../imgs/bg-intro@2x.jpg');
+	background-size: cover;
+	background-position: center;
+	padding-top: 280px;
+}
+
+.intro > div {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	align-items: center;
+	padding: 44px 4%;
+}
+
+.intro h1 {
+	flex: 1;
+	font: var(--fonte-primaria);
+	color: #fff;
+}
+
+.intro form {
+	display: flex;
+}
+
+.intro form input {
+	display: block;
+	padding: 15px 10px;
+	border: 0px;
+	border-radius: 5px 0 0 5px;
+	min-width: 285px;
+}
+
+.intro form input::placeholder {
+	font: var(--fonte-secundaria-md-b);
+	color: var(--cor-neutra-200);
+}
+
+.intro form input:focus {
+	outline: none;
+}
+
+.intro form button {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+	padding: 15px 10px;
+	border-radius: 0 5px 5px 0;
+	font: var(--fonte-secundaria-md-b);
+	color: #fff;
+	background: var(--cor-secundaria-200);
+	cursor: pointer;
+	border: 0;
+}
+
+@media (width <= 1080px) {
+	.intro form {
+		flex-direction: column;
+	}
+
+	.intro form input {
+		border-radius: 5px 5px 0 0;
+	}
+
+	.intro form button {
+		border-radius: 0 0 5px 5px;
+	}
+
+	.intro form button {
+		font-size: var(--fonte-secundaria-sm-b);
+	}
+}
+
+@media (width <= 510px) {
+	.intro > div {
+		flex-direction: column;
+		align-items: start;
+		gap: 20px;
+	}
+
+	.intro form {
+		width: 100%;
+	}
+}
