@@ -230,8 +230,6 @@ section.praias {
 .praias .embed {
 	position: relative;
 	padding-bottom: 56.25%;
-	height: 0;
-	overflow: hidden;
 	margin: auto;
 	width: 100%;
 	max-width: 600px;
@@ -301,7 +299,7 @@ section.praias {
 	display: block;
 	position: absolute;
 	left: -15px;
-	top: 5px;
+	top: 8px;
 	width: 8px;
 	height: 8px;
 	background: url(../imgs/detalhe-como-chegar.svg);
@@ -309,6 +307,7 @@ section.praias {
 
 .como-chegar li {
 	gap: 5px;
+	padding-bottom: 5px;
 	font: var(--fonte-secundaria-md-b);
 	color: var(--cor-neutra-600);
 	position: relative;
@@ -318,7 +317,7 @@ section.praias {
 	content: '';
 	display: block;
 	position: absolute;
-	top: 8px;
+	top: 10px;
 	left: -16px;
 	width: 10px;
 	height: 2px;
@@ -463,14 +462,20 @@ section.aulas {
 	}
 
 	.card-aula {
-		flex: 1 1 370;
+		flex: 1 1 370px;
+		align-items: center;
 	}
 
-	.card-aula ul {
-		font-size: 1.2rem;
-	}
-
+	.card-aula ul,
 	.card-aula span {
 		font-size: 1.2rem;
+	}
+
+	.card-aula a {
+		justify-content: center;
+	}
+
+	.card-aula a img {
+		margin-left: 15px;
 	}
 }
