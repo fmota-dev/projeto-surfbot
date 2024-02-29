@@ -323,6 +323,8 @@ section.praias {
 }
 
 .como-chegar h3 {
+	display: flex;
+	align-items: center;
 	font: var(--fonte-secundaria-md-b);
 	color: var(--cor-neutra-600);
 	padding-bottom: 15px;
@@ -334,13 +336,14 @@ section.praias {
 	display: block;
 	position: absolute;
 	left: -15px;
-	top: 8px;
 	width: 8px;
 	height: 8px;
 	background: url(../imgs/detalhe-como-chegar.svg);
 }
 
 .como-chegar li {
+	display: flex;
+	align-items: center;
 	gap: 5px;
 	padding-bottom: 5px;
 	font: var(--fonte-secundaria-md-b);
@@ -352,7 +355,6 @@ section.praias {
 	content: '';
 	display: block;
 	position: absolute;
-	top: 10px;
 	left: -16px;
 	width: 10px;
 	height: 2px;
@@ -396,6 +398,9 @@ section.aulas {
 }
 
 .aulas h2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	text-align: center;
 	font: var(--fonte-primaria);
 	color: var(--cor-neutra-500);
@@ -408,12 +413,7 @@ section.aulas {
 	display: block;
 	width: 174px;
 	height: 70px;
-	top: 0; /* Posiciona o elemento SVG na metade da altura da tela */
-	left: 50%; /* Posiciona o elemento SVG na metade da largura da tela */
-	transform: translate(
-		-50%,
-		-50%
-	); /* Move o elemento SVG de volta para centralizá-lo */
+	top: -30px;
 	position: absolute;
 	background: url(../imgs/ondas.svg) no-repeat;
 }
@@ -458,15 +458,15 @@ section.aulas {
 }
 
 .card-aula ul li {
+	display: flex;
+	align-items: center;
 	position: relative;
 }
 
 .card-aula ul li::after {
 	content: '';
-	display: inline-block;
 	position: absolute;
 	left: -15px;
-	top: 5px;
 	width: 8px;
 	height: 8px;
 	background: url(../imgs/detalhe-como-chegar.svg);
