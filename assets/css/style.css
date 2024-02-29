@@ -14,6 +14,14 @@
 	--cor-neutra-500: #445566;
 	--cor-neutra-600: #17222d;
 
+	--gradiente-primario: linear-gradient(180deg, #ee2211 0%, #9b1a10 100%);
+
+	--gradiente-secundario: linear-gradient(
+		180deg,
+		#445566 -13.75%,
+		#566b81 100%
+	);
+
 	--fonte-primaria: 400 4.5rem Alice, sans-serif;
 	--fonte-secundaria-lg: 400 1.5rem Nunito, sans-serif;
 	--fonte-secundaria-lg-b: 700 1.5rem Nunito, sans-serif;
@@ -186,9 +194,13 @@ section.intro {
 	border-radius: 0 5px 5px 0;
 	font: var(--fonte-secundaria-md-b);
 	color: #fff;
-	background: var(--cor-secundaria-200);
+	background: var(--gradiente-primario);
 	cursor: pointer;
 	border: 0;
+}
+
+.intro form button:hover {
+	background: var(--cor-neutra-500);
 }
 
 @media (width <= 1080px) {
@@ -466,9 +478,13 @@ section.aulas {
 	border-radius: 5px;
 	font: var(--fonte-secundaria-md-b);
 	color: #fff;
-	background: var(--cor-neutra-500);
+	background: var(--gradiente-secundario);
 	width: 100%;
 	padding: 10px 15px;
+}
+
+.card-aula a:hover {
+	background: var(--cor-primaria-200);
 }
 
 @media (width <= 1275px) {
