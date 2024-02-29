@@ -21,6 +21,19 @@
 	--fonte-secundaria-md-b: 700 1.125rem Nunito, sans-serif;
 	--fonte-secundaria-sm: 400 0.875rem Nunito, sans-serif;
 	--fonte-secundaria-sm-b: 700 0.875rem Nunito, sans-serif;
+
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: var(--cor-neutra-200);
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: var(--cor-neutra-600);
+		border-radius: 10px;
+	}
 }
 
 * {
@@ -92,6 +105,7 @@ header {
 	color: #fff;
 	padding: 8px 0;
 	border-radius: 5px;
+	transition: ease-in-out 0.2s;
 }
 
 .cabecalho-inferior ul li a:last-child::after {
@@ -103,7 +117,8 @@ header {
 }
 
 .cabecalho-inferior ul li a:hover {
-	background: var(--cor-neutra-500);
+	color: var(--cor-neutra-200);
+	font-weight: 800;
 }
 
 @media (width <= 670px) {
