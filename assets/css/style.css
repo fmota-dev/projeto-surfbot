@@ -516,6 +516,7 @@ section.aulas {
 .card-aula a {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	border-radius: 5px;
 	font: var(--fonte-secundaria-md-b);
 	color: #fff;
@@ -615,4 +616,124 @@ section.aulas {
 	.quote p {
 		font-size: 2.5rem;
 	}
+}
+
+/* CONTATO */
+
+.contato h2 {
+	padding-top: 60px;
+	padding-bottom: 30px;
+	text-align: center;
+	font: var(--fonte-primaria);
+	color: var(--cor-neutra-500);
+}
+
+.contato .container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 220px;
+	padding: 0 4%;
+}
+
+.contato form {
+	display: flex;
+	flex-direction: column;
+	max-width: 470px;
+}
+
+.contato label {
+	font: var(--fonte-secundaria-md-b);
+	color: var(--cor-neutra-500);
+	padding-bottom: 3px;
+}
+
+.contato input {
+	background-color: var(--cor-neutra-100);
+	padding: 10px;
+	border: none;
+	margin-bottom: 15px;
+}
+
+.contato textarea {
+	background-color: var(--cor-neutra-100);
+	padding: 10px;
+	border: 0;
+	outline: none;
+	resize: none;
+	margin-bottom: 30px;
+}
+
+.contato form a {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 5px;
+	font: var(--fonte-secundaria-md-b);
+	color: #fff;
+	background: var(--gradiente-secundario);
+	max-width: 230px;
+	padding: 12px 15px;
+	margin-bottom: 60px;
+}
+
+.contato ul span {
+	font: var(--fonte-secundaria-md-b);
+	color: var(--cor-neutra-500);
+	margin-bottom: 5px;
+}
+
+.contato ul span:last-of-type {
+	display: block;
+	margin-top: 30px;
+}
+
+.contato ul li {
+	font: var(--fonte-secundaria-sm);
+	color: var(--cor-neutra-500);
+}
+
+.contato ul a {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	text-decoration: none;
+	font: var(--fonte-secundaria-sm-b);
+	color: var(--cor-neutra-500);
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.contato ul a::after {
+	content: '';
+	display: block;
+	width: 12px;
+	height: 12px;
+	background: url(../imgs/seta-vermelha.svg);
+}
+
+@media (width <= 830px) {
+	.contato .container {
+		grid-template-columns: 1fr;
+	}
+
+	.contato form {
+		max-width: 800px;
+	}
+}
+
+.rodape {
+	margin-top: 50px;
+	background: var(--cor-primaria-200);
+}
+
+.rodape > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 4%;
+}
+
+.rodape p {
+	font: var(--fonte-secundaria-md-b);
+	color: #fff;
 }
