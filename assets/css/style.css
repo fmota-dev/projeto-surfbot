@@ -404,8 +404,7 @@ section.aulas {
 	text-align: center;
 	font: var(--fonte-primaria);
 	color: var(--cor-neutra-500);
-	padding-top: 30px;
-	padding-bottom: 25px;
+	padding-bottom: 60px;
 }
 
 .aulas h2::before {
@@ -422,18 +421,52 @@ section.aulas {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	gap: 30px;
+	gap: 60px;
 }
 
 .card-aula {
 	display: flex;
-	flex: 1 1 370px;
 	flex-direction: column;
-	padding: 60px;
+	flex: 1 1 370px;
+	position: relative;
+	padding: 30px 60px;
 	border-radius: 5px;
 	background: #fff;
 	box-shadow: 0px 10px 10px 0px rgba(187, 204, 221, 0.4),
 		0px 5px 5px 0px rgba(187, 204, 221, 0.4);
+}
+
+.card-aula:nth-child(1)::before {
+	content: '';
+	display: block;
+	width: 22px;
+	height: 39px;
+	top: -20px;
+	position: absolute;
+	background: url(../imgs/surfbot-icon.svg) no-repeat;
+	align-self: center;
+}
+
+.card-aula:nth-child(2)::before {
+	content: '';
+	display: block;
+	width: 53px;
+	height: 39px;
+	top: -20px;
+	position: absolute;
+	background: url(../imgs/surfbot2-icon.svg) no-repeat;
+	align-self: center;
+}
+
+.card-aula:nth-child(3)::before {
+	content: '';
+	display: block;
+	width: 86px;
+	height: 39px;
+	top: -20px;
+	position: absolute;
+	background: url(../imgs/surfbot3-icon.svg) no-repeat;
+	align-self: center;
 }
 
 .card-aula h3 {
@@ -495,6 +528,32 @@ section.aulas {
 	background: var(--cor-primaria-200);
 }
 
+.aulas .texto-desconto {
+	font: var(--fonte-secundaria-md);
+	color: var(--cor-neutra-500);
+	margin-top: 30px;
+	text-align: center;
+}
+
+.aulas .texto-desconto strong {
+	color: var(--cor-secundaria-100);
+}
+
+.aulas .texto-desconto span {
+	position: relative;
+}
+
+.aulas .texto-desconto span::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 2px;
+	bottom: -3px;
+	left: 0;
+	background: var(--cor-secundaria-100);
+	position: absolute;
+}
+
 @media (width <= 1275px) {
 	.box-aulas {
 		justify-content: center;
@@ -516,5 +575,11 @@ section.aulas {
 
 	.card-aula a img {
 		margin-left: 15px;
+	}
+}
+
+@media (width <= 435px) {
+	.card-aula {
+		padding: 30px 20px;
 	}
 }
