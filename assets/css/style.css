@@ -583,3 +583,36 @@ section.aulas {
 		padding: 30px 20px;
 	}
 }
+
+/* QUOTE */
+
+.quote {
+	background-image: url(../imgs/foto-quote@2x.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #fff;
+	text-align: center;
+	padding: 160px;
+	max-width: 100%;
+}
+
+.quote p {
+	font: var(--fonte-primaria);
+}
+
+.quote span {
+	display: block;
+	font: var(--fonte-secundaria-md-b);
+	margin-top: 30px;
+}
+
+@media (width <= 700px) {
+	.quote {
+		padding: 60px 20px;
+	}
+
+	.quote p {
+		font-size: 2.5rem;
+	}
+}
