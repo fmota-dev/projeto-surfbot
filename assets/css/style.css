@@ -178,6 +178,8 @@ section.intro {
 	border: 0px;
 	border-radius: 5px 0 0 5px;
 	min-width: 285px;
+	font: var(--fonte-secundaria-md-b);
+	color: var(--cor-neutra-400);
 }
 
 .intro form input::placeholder {
