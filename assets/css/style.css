@@ -678,6 +678,10 @@ section.aulas {
 	margin-bottom: 60px;
 }
 
+.contato form a:hover {
+	background: var(--cor-primaria-200);
+}
+
 .contato ul span {
 	font: var(--fonte-secundaria-md-b);
 	color: var(--cor-neutra-500);
