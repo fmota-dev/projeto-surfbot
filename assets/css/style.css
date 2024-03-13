@@ -148,7 +148,7 @@ header {
 
 /* INTRO */
 section.intro {
-	background-image: url('../imgs/bg-intro@2x.jpg');
+	background-image: url('../imgs/bg-intro.jpg');
 	background-size: cover;
 	background-position: center;
 	padding-top: 280px;
@@ -590,7 +590,7 @@ section.aulas {
 /* QUOTE */
 
 .quote {
-	background-image: url(../imgs/foto-quote@2x.jpg);
+	background-image: url(../imgs/foto-quote.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -622,12 +622,31 @@ section.aulas {
 
 /* CONTATO */
 
+.contato {
+	background-image: url('../imgs/bg-icones.svg');
+	background-repeat: no-repeat;
+	background-position: center right 70px;
+}
+
 .contato h2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding-top: 60px;
 	padding-bottom: 30px;
 	text-align: center;
 	font: var(--fonte-primaria);
 	color: var(--cor-neutra-500);
+	position: relative;
+}
+
+.contato h2::after {
+	content: '';
+	width: 2px;
+	height: 477px;
+	top: 175px;
+	position: absolute;
+	background-color: var(--cor-neutra-100);
 }
 
 .contato .container {
@@ -688,14 +707,46 @@ section.aulas {
 	margin-bottom: 5px;
 }
 
-.contato ul span:last-of-type {
+.contato ul span.detalhe {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.contato ul span.detalhe::before {
+	content: '';
+	position: absolute;
+	left: -15px;
+	width: 8px;
+	height: 8px;
+	background: url(../imgs/detalhe-horario.svg);
+}
+
+.contato span.detalhe-linha::before {
+	content: '';
 	display: block;
-	margin-top: 30px;
+	width: 270px;
+	height: 2px;
+	margin-bottom: 15px;
+	background: var(--cor-neutra-100);
+}
+
+.contato ul span:last-of-type {
+	margin-top: 15px;
 }
 
 .contato ul li {
 	font: var(--fonte-secundaria-sm);
 	color: var(--cor-neutra-500);
+}
+
+.contato ul li.detalhe-linha::after {
+	content: '';
+	display: block;
+	width: 270px;
+	height: 2px;
+	background: var(--cor-neutra-100);
+	margin-top: 15px;
 }
 
 .contato ul a {
@@ -706,7 +757,6 @@ section.aulas {
 	font: var(--fonte-secundaria-sm-b);
 	color: var(--cor-neutra-500);
 	margin-top: 10px;
-	margin-bottom: 20px;
 }
 
 .contato ul a::after {
@@ -718,12 +768,24 @@ section.aulas {
 }
 
 @media (width <= 830px) {
+	.contato {
+		background-position: bottom right 25px;
+	}
+
 	.contato .container {
 		grid-template-columns: 1fr;
 	}
 
 	.contato form {
 		max-width: 800px;
+	}
+
+	.contato h2::after {
+		display: none;
+	}
+
+	.contato span.detalhe-linha::before, .contato ul li.detalhe-linha::after {
+		width: 200px;
 	}
 }
 
