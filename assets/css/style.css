@@ -701,6 +701,39 @@ section.aulas {
 	background: var(--cor-primaria-200);
 }
 
+.contato ul li {
+	font: var(--fonte-secundaria-sm);
+	color: var(--cor-neutra-500);
+}
+
+.contato ul li.detalhe-linha::after {
+	content: '';
+	display: block;
+	width: 270px;
+	height: 2px;
+	background: var(--cor-neutra-100);
+	margin-top: 15px;
+}
+
+.contato ul a {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	text-decoration: none;
+	font: var(--fonte-secundaria-sm-b);
+	color: var(--cor-neutra-500);
+	margin-top: 10px;
+}
+
+.contato ul a::after {
+	content: '';
+	display: block;
+	width: 12px;
+	height: 12px;
+	background: url(../imgs/seta-vermelha.svg);
+	animation: move-to-right ease-in-out infinite 2s;
+}
+
 .contato ul span {
 	font: var(--fonte-secundaria-md-b);
 	color: var(--cor-neutra-500);
@@ -735,36 +768,18 @@ section.aulas {
 	margin-top: 15px;
 }
 
-.contato ul li {
-	font: var(--fonte-secundaria-sm);
-	color: var(--cor-neutra-500);
-}
+@keyframes move-to-right {
+	0% {
+		transform: translateX(0);
+	}
 
-.contato ul li.detalhe-linha::after {
-	content: '';
-	display: block;
-	width: 270px;
-	height: 2px;
-	background: var(--cor-neutra-100);
-	margin-top: 15px;
-}
+	50% {
+		transform: translateX(5px);
+	}
 
-.contato ul a {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	text-decoration: none;
-	font: var(--fonte-secundaria-sm-b);
-	color: var(--cor-neutra-500);
-	margin-top: 10px;
-}
-
-.contato ul a::after {
-	content: '';
-	display: block;
-	width: 12px;
-	height: 12px;
-	background: url(../imgs/seta-vermelha.svg);
+	100% {
+		transform: translateX(0);
+	}
 }
 
 @media (width <= 830px) {
@@ -784,7 +799,8 @@ section.aulas {
 		display: none;
 	}
 
-	.contato span.detalhe-linha::before, .contato ul li.detalhe-linha::after {
+	.contato span.detalhe-linha::before,
+	.contato ul li.detalhe-linha::after {
 		width: 200px;
 	}
 }
